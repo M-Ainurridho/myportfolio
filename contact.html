@@ -51,20 +51,20 @@
                <div class="col-lg-6 mx-auto mt-3">
                   <form>
                      <div class="mb-3">
-                        <label for="inputName" class="form-label">Name</label>
-                        <input type="password" class="form-control" id="inputName" />
+                        <label for="inputName" class="form-label">Fullname</label>
+                        <input type="text" class="form-control shadow-sm" id="inputName" required />
                      </div>
                      <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                        <label for="inputEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control shadow-sm" id="inputEmail" aria-describedby="emailHelp" required />
                      </div>
                      <div class="mb-3">
                         <label for="inputPhoneNumber" class="form-label">Phone Number</label>
-                        <input type="tel" class="form-control" id="inputPhoneNumber" />
+                        <input type="tel" class="form-control shadow-sm" id="inputPhoneNumber" required />
                      </div>
                      <div class="mb-3">
                         <label for="inputSubject" class="form-label">Subject</label>
-                        <select class="form-select" id="inputSubject">
+                        <select class="form-select shadow-sm" id="inputSubject">
                            <option selected>Collaboration</option>
                            <option>Discussion</option>
                            <option>Hiring</option>
@@ -73,7 +73,7 @@
                      </div>
                      <div class="mb-3">
                         <label for="inputMessage" class="form-label">Your Message</label>
-                        <textarea class="form-control" id="inputMessage" placeholder="Leave a comment here" style="height: 100px"></textarea>
+                        <textarea class="form-control shadow-sm" id="inputMessage" placeholder="Leave a comment here" style="height: 100px" required></textarea>
                      </div>
 
                      <button type="submit" class="btn btn-dark">Submit</button>
@@ -86,6 +86,7 @@
       <!-- Akhir Contact Form -->
 
       <!-- Script -->
+      <script src="assets/js/contact.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
    </body>
 </html>
