@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Contact | Portfolio</title>
+      <!-- CDN Bootstrap -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+      <!-- CSS Style -->
+      <link rel="stylesheet" href="assets/css/style.css" />
+      <!-- Font Awesome v6 -->
+      <script src="https://kit.fontawesome.com/c92e202055.js" crossorigin="anonymous"></script>
+   </head>
+   <body class="bg-dark-subtle py-5">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+         <div class="container">
+            <a class="navbar-brand" href="index.html">
+               <img src="assets/images/brand.png" alt="Bootstrap" width="40" height="30" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                     <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="projects.html">Projects</a>
+                  </li>
+               </ul>
+               <div class="d-flex">
+                  <a class="nav-link bg-dark py-2 px-4 text-white rounded-4 active" href="contact.html">Contact</a>
+               </div>
+            </div>
+         </div>
+      </nav>
+      <!-- Akhir Navbar -->
+
+      <!-- Contact Form -->
+      <section>
+         <div class="container mt-5">
+            <div class="row">
+               <div class="col-lg text-center">
+                  <h1>Contact</h1>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-lg-6 mx-auto mt-3">
+                  <form>
+                     <div class="mb-3">
+                        <label for="inputName" class="form-label">Fullname</label>
+                        <input type="text" class="form-control shadow-sm" id="inputName" required />
+                     </div>
+                     <div class="mb-3">
+                        <label for="inputEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control shadow-sm" id="inputEmail" aria-describedby="emailHelp" required />
+                     </div>
+                     <div class="mb-3">
+                        <label for="inputPhoneNumber" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control shadow-sm" id="inputPhoneNumber" required />
+                     </div>
+                     <div class="mb-3">
+                        <label for="inputSubject" class="form-label">Subject</label>
+                        <select class="form-select shadow-sm" id="inputSubject">
+                           <option selected>Collaboration</option>
+                           <option>Discussion</option>
+                           <option>Hiring</option>
+                           <option>Troll</option>
+                        </select>
+                     </div>
+                     <div class="mb-3">
+                        <label for="inputMessage" class="form-label">Your Message</label>
+                        <textarea class="form-control shadow-sm" id="inputMessage" placeholder="Leave a comment here" style="height: 100px" required></textarea>
+                     </div>
+
+                     <button type="submit" class="btn btn-dark">Submit</button>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- Akhir Contact Form -->
+
+      <!-- Script -->
+      <script src="assets/js/contact.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+   </body>
+</html>

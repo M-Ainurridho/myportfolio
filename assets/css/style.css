@@ -1,4 +1,13 @@
 .header p {
    text-align: justify;
+   padding-right: 30px;
 }
 
+@media (max-width: 991.98px) {
+   .header p {
+      padding-right: 0;
+   }
+   .sosmed {
+      text-align: center;
+   }
+}
