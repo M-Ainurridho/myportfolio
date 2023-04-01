@@ -1,0 +1,59 @@
+/* NAVBAR AND OFFCANVAS */
+.navbar {
+    width: 80% !important;
+    margin-left: auto;
+    transition: .3s !important;
+}
+
+.full-navbar {
+    width: 100% !important;
+}
+
+.offcanvas {
+    width: 20% !important;
+    transition: .3s !important;
+}
+
+/* MYPROJECTS, ADDPROJECT, FOOTER */
+.myprojects,
+.addproject, 
+footer {
+    width: 80% !important;
+    margin-left: auto;
+    transition: .3s !important;
+}
+
+.full-myprojects,
+.full-addproject,
+.full-footer {
+    width: 100% !important;
+}
+
+/* MYPROJECTS  */
+#myprojects {
+    min-height: 93vh;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+/* DESKTOP AND TABLET */
+@media (max-width: 991.98px) { 
+    .navbar,
+    .myprojects,
+    .addproject,
+    footer {
+        width: 100% !important;
+        margin-left: auto;
+    }
+
+    .offcanvas {
+        width: 50% !important;
+        transition: .3s !important;
+    }   
+}
+
+/* MOBILE */
+@media (max-width: 575.98px) {
+    .offcanvas {
+        width: 75% !important;
+    } 
+ }

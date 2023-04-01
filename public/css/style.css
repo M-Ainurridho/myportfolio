@@ -1,0 +1,9 @@
+/* PAGE LOGIN  */
+#login {
+    min-height: 527px;
+}
+
+#myProjects,
+#detailProject {
+   min-height: 575px; 
+}
