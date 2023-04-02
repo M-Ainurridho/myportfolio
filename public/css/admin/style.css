@@ -44,11 +44,11 @@ footer {
         width: 100% !important;
         margin-left: auto;
     }
-
+    
     .offcanvas {
         width: 50% !important;
         transition: .3s !important;
-    }   
+    }
 }
 
 /* MOBILE */

@@ -7,22 +7,28 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-lg-10">
+        <div class="row d-flex justify-content-center">
+            <div class="col-lg-5">
+                <?php if (isset($_SESSION['image'])) : ?>
+                    <?= Message::errorUploadMessage(); ?>
+                <?php endif; ?>
+            </div>
+            <div class="col-lg-5">
                 <?php if (isset($_SESSION['message'])) : ?>
                     <?= Message::message(); ?>
                 <?php endif; ?>
             </div>
-            <div class="col-lg-2 mb-4 d-flex justify-content-end">
+            <div class="col-lg-2 mb-4">
                 <a href="<?= BASEURL ?>/admin/projects/add" class="btn btn-primary position-absolute">New Project</a>
             </div>
         </div>
+
 
         <div class="row justify-content-center mt-3 gy-3">
             <?php foreach ($data['projects'] as $project) : ?>
                 <div class="col-md-6 col-lg-4">
                     <div class="card">
-                        <img src="<?= BASEURL ?>/images/<?= $project["image"] ?>" class="card-img-top" height="200" alt="...">
+                        <img src="<?= BASEURL ?>/images/projects/<?= $project["image"] ?>" class="card-img-top" height="200" alt="project-image">
                         <div class="card-body">
                             <h5 class="card-title"><?= $project["title"] ?></h5>
                             <p class="card-text text-nowrap overflow-hidden text-truncate"><?= $project["description"] ?></p>

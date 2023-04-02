@@ -9,7 +9,7 @@
 
         <div class="row">
             <div class="col-lg-7">
-                <img src="<?= BASEURL ?>/images/<?= $data['project']["image"] ?>" class="img-fluid rounded-2 mb-2" alt="...">
+                <img src="<?= BASEURL ?>/images/projects/<?= $data['project']["image"] ?>" class="img-fluid rounded-2 mb-2" alt="...">
             </div>
             <div class="col-lg-5">
                 <div class="row">

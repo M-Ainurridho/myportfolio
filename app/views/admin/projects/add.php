@@ -8,7 +8,7 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-6 mt-4">
-                <form action="<?= BASEURL; ?>/admin/projects/insert-data" method="post">
+                <form action="<?= BASEURL; ?>/admin/projects/insert-data" method="post" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label for="title" class="form-label">Title</label>
                         <input type="text" class="form-control" id="title" name="title">

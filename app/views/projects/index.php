@@ -11,7 +11,7 @@
             <?php foreach ($data['projects'] as $project) : ?>
                 <div class="col-lg-4">
                     <div class="card">
-                        <img src="../public/images/<?= $project["image"] ?>" class="card-img-top" height="200" alt="project-image">
+                        <img src="<?= BASEURL ?>/images/projects/<?= $project["image"] ?>" class="card-img-top" height="200" alt="project-image">
                         <div class="card-body">
                             <h5 class="card-title"><?= $project["title"] ?></h5>
                             <p class="card-text text-nowrap overflow-hidden text-truncate"><?= $project["description"] ?></p>
