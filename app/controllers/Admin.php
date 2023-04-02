@@ -38,6 +38,14 @@ class Admin extends Controller
             $this->view('templates/templates-admin/header', $data);
             $this->view('admin/projects/' . $url, $data);
             $this->view('templates/templates-admin/footer');
+        } else if ($url === 'edit') {
+            $data['title'] = 'Edit Project';
+            $data['dir'] = 'Admin';
+            $data['project'] = $this->model('Projects_model')->getProjectById($id);
+
+            $this->view('templates/templates-admin/header', $data);
+            $this->view('admin/projects/' . $url, $data);
+            $this->view('templates/templates-admin/footer');
         } else if ($url === 'insert-data') {
             if ($this->model('Projects_model')->addNewProject($_POST) > 0) {
                 Message::flash('Selamat projects baru berhasil', 'ditambahkan', 'success');
@@ -80,5 +88,3 @@ class Admin extends Controller
         exit;
     }
 }
-
-

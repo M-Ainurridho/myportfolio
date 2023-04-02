@@ -1,7 +1,7 @@
 const button = document.querySelector('.navbar-toggler');
 const navbar = document.querySelector('.navbar');
 const footer = document.querySelector('footer');
-
+const id = window.location.href.split('/')
 
 if (window.location.href == 'http://localhost/myportfolio/public/admin/projects/add') {
     button.addEventListener('click', function () {
@@ -9,6 +9,14 @@ if (window.location.href == 'http://localhost/myportfolio/public/admin/projects/
 
     navbar.classList.toggle('full-navbar');
     addProject.classList.toggle('full-addproject');
+    footer.classList.toggle('full-footer');
+}) 
+} else if (window.location.href == `http://localhost/myportfolio/public/admin/projects/edit/${id[8]}`) {
+    button.addEventListener('click', function () {
+    const editProject = document.querySelector('.editproject');
+
+    navbar.classList.toggle('full-navbar');
+    editProject.classList.toggle('full-editproject');
     footer.classList.toggle('full-footer');
     }) 
 } else {

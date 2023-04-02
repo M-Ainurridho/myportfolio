@@ -16,7 +16,8 @@
 
 /* MYPROJECTS, ADDPROJECT, FOOTER */
 .myprojects,
-.addproject, 
+.addproject,
+.editproject, 
 footer {
     width: 80% !important;
     margin-left: auto;
@@ -25,6 +26,7 @@ footer {
 
 .full-myprojects,
 .full-addproject,
+.full-editproject,
 .full-footer {
     width: 100% !important;
 }
