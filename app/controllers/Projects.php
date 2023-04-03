@@ -98,6 +98,19 @@ class Projects extends Controller
         $this->view('templates/templates-admin/footer');
     }
 
+    // Update data after edit 
+    public function update() {
+        if ($this->model('Projects_model')->updateProjectById($_POST) > 0) {
+            Message::flash('Selamat projects berhasil', 'diupdate', 'success');
+            header('Location: ' . BASEURL . '/admin');
+            exit;
+        } else {
+            Message::flash('Maaf projects gagal', 'diupdate', 'danger');
+            header('Location: ' . BASEURL . '/admin');
+            exit;
+        }
+    }
+
     public function dark()
     {
         $_SESSION['theme'] = true;

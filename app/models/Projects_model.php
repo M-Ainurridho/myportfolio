@@ -24,13 +24,55 @@ class Projects_model
         return $this->db->single();
     }
 
+    public function updateProjectById($data)
+    {
+
+        if ($_FILES['newimage']['error'] === 4) {
+            $image = $data['oldimage'];
+        } else {
+            $this->deleteImageById($data['id']);
+            $image = $this->upload($_FILES['newimage']);
+        }
+
+        $query = "UPDATE " . $this->table . " SET
+                    title = :title,
+                    start_date = :start_date,
+                    end_date = :end_date,
+                    description = :description,
+                    image = :image 
+                    WHERE id = :id";
+
+        $this->db->query($query);
+        $this->db->bind('title', $data['title']);
+        $this->db->bind('start_date', $data['startDate']);
+        $this->db->bind('end_date', $data['endDate']);
+        $this->db->bind('description', $data['description']);
+        $this->db->bind('image', $image);
+        $this->db->bind('id', $data['id']);
+
+        $this->db->execute();
+        return $this->db->rowCount();
+    }
+
     public function deleteProjectById($id)
     {
+        $this->deleteImageById($id);
+
         $this->db->query('DELETE FROM ' . $this->table . ' WHERE id=:id');
         $this->db->bind('id', $id);
 
         $this->db->execute();
         return $this->db->rowCount();
+    }
+
+    public function deleteImageById($id)
+    {
+        $this->db->query('SELECT * FROM ' . $this->table . ' WHERE id=:id');
+        $this->db->bind('id', $id);
+
+        $project = $this->db->single();
+        $imgFile = 'images/projects/' . $project['image'];
+        return unlink($imgFile);
     }
 
     public function addNewProject($data)
@@ -54,6 +96,7 @@ class Projects_model
         return $this->db->rowCount();
     }
 
+    // Upload Image
     public function upload($image)
     {
         $imageName = $image['name'];
@@ -80,7 +123,7 @@ class Projects_model
             return false;
         }
 
-        $imageName = uniqid($fileExtension[0]); 
+        $imageName = uniqid($fileExtension[0]);
         $imageName .= '.';
         $imageName .= $fileExtension;
 
@@ -88,4 +131,5 @@ class Projects_model
         return $imageName;
     }
 }
+
 
