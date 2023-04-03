@@ -9,7 +9,7 @@
 
         <div class="row justify-content-center mt-3 gy-3">
             <?php foreach ($data['projects'] as $project) : ?>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="card">
                         <img src="<?= BASEURL ?>/images/projects/<?= $project["image"] ?>" class="card-img-top" height="200" alt="project-image">
                         <div class="card-body">

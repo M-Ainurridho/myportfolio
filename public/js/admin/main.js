@@ -3,7 +3,7 @@ const navbar = document.querySelector('.navbar');
 const footer = document.querySelector('footer');
 const id = window.location.href.split('/')
 
-if (window.location.href == 'http://localhost/myportfolio/public/admin/projects/add') {
+if (window.location.href == 'http://localhost/myportfolio/public/projects/add') {
     button.addEventListener('click', function () {
     const addProject = document.querySelector('.addproject');
 
@@ -11,7 +11,7 @@ if (window.location.href == 'http://localhost/myportfolio/public/admin/projects/
     addProject.classList.toggle('full-addproject');
     footer.classList.toggle('full-footer');
 }) 
-} else if (window.location.href == `http://localhost/myportfolio/public/admin/projects/edit/${id[8]}`) {
+} else if (window.location.href == `http://localhost/myportfolio/public/projects/edit/${id[7]}`) {
     button.addEventListener('click', function () {
     const editProject = document.querySelector('.editproject');
 

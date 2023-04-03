@@ -19,7 +19,7 @@
                 <?php endif; ?>
             </div>
             <div class="col-lg-2 mb-4">
-                <a href="<?= BASEURL ?>/admin/projects/add" class="btn btn-primary position-absolute">New Project</a>
+                <a href="<?= BASEURL ?>/projects/add" class="btn btn-primary position-absolute">New Project</a>
             </div>
         </div>
 
@@ -33,7 +33,7 @@
                             <h5 class="card-title"><?= $project["title"] ?></h5>
                             <p class="card-text text-nowrap overflow-hidden text-truncate"><?= $project["description"] ?></p>
                             <div class="d-flex gap-2 flex-grow-1">
-                                <a href="<?= BASEURL ?>/admin/projects/edit/<?= $project["id"]; ?>" class="btn btn-primary  d-block flex-grow-1">Edit</a>
+                                <a href="<?= BASEURL ?>/projects/edit/<?= $project["id"]; ?>" class="btn btn-primary  d-block flex-grow-1">Edit</a>
                                 <a href="#deleteProject" class="btn btn-danger d-block flex-grow-1" data-bs-toggle="modal">Delete</a>
                             </div>
 
@@ -55,11 +55,11 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <p>Are you sure you want to delete this project?</p>
+                <p>Are you sure, you want to delete this project?</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                <a href="<?= BASEURL ?>/admin/projects/delete/<?= $project["id"]; ?>" class="btn btn-primary">Confirm</a>
+                <a href="<?= BASEURL ?>/projects/delete/<?= $project["id"]; ?>" class="btn btn-primary">Confirm</a>
             </div>
         </div>
     </div>
