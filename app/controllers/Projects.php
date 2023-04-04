@@ -3,10 +3,12 @@
 class Projects extends Controller
 {
     // Default open pages
-    public function index()
+    public function index($page = 'page', $index = '1')
     {
         $data['title'] = 'Projects';
-        $data['projects'] = $this->model('Projects_model')->getAllProjects();
+        $data['projects'] = $this->model('Projects_model')->getAllProjects($index);
+        $data['jmlhalaman'] = $data['projects'][1];
+        $data['active'] = $data['projects'][2];
 
         $this->view('templates/templates-user/header', $data);
         $this->view('projects/index', $data);
@@ -99,7 +101,8 @@ class Projects extends Controller
     }
 
     // Update data after edit 
-    public function update() {
+    public function update()
+    {
         if ($this->model('Projects_model')->updateProjectById($_POST) > 0) {
             Message::flash('Selamat projects berhasil', 'diupdate', 'success');
             header('Location: ' . BASEURL . '/admin');

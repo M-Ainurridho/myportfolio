@@ -7,7 +7,7 @@ class Admin extends Controller
         return $this->projects();
     }
 
-    public function projects($url = 'index', $id = 0)
+    public function projects($page = 'page', $index = '1')
     {
         if (empty($_SESSION['login'])) {
             header('Location: ' . BASEURL . '/login');
@@ -16,10 +16,12 @@ class Admin extends Controller
 
         $data['title'] = 'Admin Projects';
         $data['dir'] = 'Admin';
-        $data['projects'] = $this->model('Projects_model')->getAllProjects();
+        $data['projects'] = $this->model('Projects_model')->getAllProjects($index);
+        $data['jmlhalaman'] = $data['projects'][1];
+        $data['active'] = $data['projects'][2];
 
         $this->view('templates/templates-admin/header', $data);
-        $this->view('admin/projects/' . $url, $data);
+        $this->view('admin/projects/index', $data);
         $this->view('templates/templates-admin/footer');
     }
 

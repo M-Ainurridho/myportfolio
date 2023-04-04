@@ -45,9 +45,9 @@
                 </div>
             </div>
         </div>
-
         <div class="row mt-2">
             <div class="col-lg">
+                <h5>Description :</h5>
                 <p class="description"><?= $data['project']["description"] ?></p>
             </div>
         </div>

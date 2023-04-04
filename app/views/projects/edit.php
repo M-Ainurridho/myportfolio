@@ -29,7 +29,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="description" class="form-label">Description</label>
-                        <textarea type="text" class="form-control" id="description" name="description" rows="7"><?= $data['project']['description'] ?>"</textarea>
+                        <textarea type="text" class="form-control" id="description" name="description" rows="7"><?= $data['project']['description'] ?></textarea>
                     </div>
                     <div class="input-group mb-3">
                         <input type="file" class="form-control" id="uploadImg" name="newimage">

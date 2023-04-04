@@ -10,10 +10,22 @@ class Projects_model
         $this->db = new Database;
     }
 
-    public function getAllProjects()
+    public function getAllProjects($index)
     {
-        $this->db->query("SELECT * FROM " . $this->table);
-        return $this->db->resultAll();
+        // Pagination
+        $dataCount = $this->db->query("SELECT * FROM " . $this->table);
+        $dataCount = $this->db->execute();
+        $dataCount = $this->db->columnCount();
+
+        $dataPerHalaman = 5;
+        $jmlHalaman = ceil($dataCount / $dataPerHalaman);
+        $halamanAktif = $_GET['url'] ? $_GET['url'] : '';
+        $halaman = intval($index);
+        $awalData = ($halaman * $dataPerHalaman) - $dataPerHalaman;
+
+        // Get data from database
+        $this->db->query("SELECT * FROM " . $this->table . " LIMIT {$awalData}, {$dataPerHalaman}");
+        return [$this->db->resultAll(), $jmlHalaman, $halaman];
     }
 
     public function getProjectById($id)
@@ -131,5 +143,3 @@ class Projects_model
         return $imageName;
     }
 }
-
-
