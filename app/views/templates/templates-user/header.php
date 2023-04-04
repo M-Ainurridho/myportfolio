@@ -38,7 +38,7 @@
                     <div class="navbar-nav d-block">
                         <a class="nav-link d-inline-block me-2" aria-current="page" href="<?= BASEURL; ?>/">Home</a>
                         <a class="nav-link d-inline-block me-2" href="<?= BASEURL; ?>/projects">Projects</a>
-                        <a class="nav-link d-inline-block me-2" href="<?= BASEURL; ?>/gallery">Gallery</a>
+                        <a class="nav-link d-inline-block me-2" href="<?= BASEURL; ?>/contact">Contact</a>
                     </div>
                 </div>
                 <!-- Navbar Right -->
@@ -46,10 +46,12 @@
                     <div class="dropdown me-3">
                         <a class="dropdown-toggle text-reset" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="<?= BASEURL; ?>/images/nophoto.jpg" class="rounded-circle" alt="admin" height="30" width="30"></a>
-                        <ul class="dropdown-menu mt-1">
+                        <ul class="dropdown-menu mt-2">
                             <?php if (isset($_SESSION['login'])) : ?>
+                                <li class="tooltip-top text-body-tertiary"></li>
                                 <li><a class="dropdown-item" href="<?= BASEURL; ?>/admin/projects">Dashboard</a></li>
                             <?php else : ?>
+                                <li class="tooltip-top"></li>
                                 <li><a class="dropdown-item" href="<?= BASEURL; ?>/login">Login</a></li>
                             <?php endif; ?>
                         </ul>
@@ -78,7 +80,7 @@
                                 <a class="nav-link" href="<?= BASEURL ?>/projects">Projects</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= BASEURL ?>/gallery">Gallery</a>
+                                <a class="nav-link" href="<?= BASEURL ?>/contact">Contact</a>
                             </li>
                         </ul>
                     </div>

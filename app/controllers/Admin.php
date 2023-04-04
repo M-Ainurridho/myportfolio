@@ -25,6 +25,22 @@ class Admin extends Controller
         $this->view('templates/templates-admin/footer');
     }
 
+    public function info()
+    {
+        if (empty($_SESSION['login'])) {
+            header('Location: ' . BASEURL . '/login');
+            exit;
+        }
+
+        $data['title'] = 'Info Message';
+        $data['dir'] = 'Admin';
+        $data['info'] = $this->model('Contact_model')->getAllInfo();
+
+        $this->view('templates/templates-admin/header', $data);
+        $this->view('admin/info/index', $data);
+        $this->view('templates/templates-admin/footer');
+    }
+
     public function logout()
     {
         unset($_SESSION['login']);

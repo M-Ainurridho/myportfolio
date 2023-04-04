@@ -1,3 +1,10 @@
+/* PAGE HOME */
+.download-cv:hover,
+.social-media a:hover {
+    color: #0d6efd !important;
+    transition: .3s;
+}
+
 /* PAGE LOGIN  */
 #login {
     min-height: 527px;
@@ -7,3 +14,13 @@
 #detailProject {
    min-height: 575px; 
 }
+
+/* UTILITIES */
+.tooltip-top {
+    position: absolute; top: -5px; left: 9px;
+    border: 5px solid transparent;
+    border-top: 0 solid transparent;
+    border-bottom: 5px solid #bbb;
+}
+
+

@@ -52,7 +52,7 @@
                                 <a class="nav-link" href="<?= BASEURL ?>/admin/projects">Projects</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Gallery</a>
+                                <a class="nav-link" href="<?= BASEURL ?>/admin/info">Info</a>
                             </li>
                         </ul>
                     </div>

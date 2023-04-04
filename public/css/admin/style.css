@@ -17,7 +17,8 @@
 /* MYPROJECTS, ADDPROJECT, FOOTER */
 .myprojects,
 .addproject,
-.editproject, 
+.editproject,
+.information, 
 footer {
     width: 80% !important;
     margin-left: auto;
@@ -27,12 +28,14 @@ footer {
 .full-myprojects,
 .full-addproject,
 .full-editproject,
+.full-information,
 .full-footer {
     width: 100% !important;
 }
 
 /* MYPROJECTS  */
-#myprojects {
+#myprojects,
+#information {
     min-height: 93vh;
 }
 
@@ -43,6 +46,7 @@ footer {
     .myprojects,
     .addproject,
     .editproject,
+    .information,
     footer {
         width: 100% !important;
         margin-left: auto;

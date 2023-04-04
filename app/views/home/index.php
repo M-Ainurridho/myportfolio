@@ -7,7 +7,7 @@
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla vero rem laudantium blanditiis iure dicta? Explicabo voluptas officia fugit consectetur rem! Qui, voluptatum blanditiis cum soluta eos quidem, harum tenetur amet, ad itaque id doloremque minus expedita adipisci aliquam libero dolor eaque nam quam similique delectus inventore. Aliquid, sed amet
                 </p>
-                <a href="#" class="text-decoration-none text-reset">Download CV <i class="fa-solid fa-download"></i></a>
+                <a href="#" class="text-decoration-none text-reset download-cv">Download CV <i class="fa-solid fa-download"></i></a>
                 <div class="social-media my-3">
                     <a href="#" class="text-reset" title="Facebook" target="_blank">
                         <i class="fa-brands fa-square-facebook fa-2x me-1"></i></a>

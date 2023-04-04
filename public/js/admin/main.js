@@ -19,6 +19,14 @@ if (window.location.href == 'http://localhost/myportfolio/public/projects/add') 
     editProject.classList.toggle('full-editproject');
     footer.classList.toggle('full-footer');
     }) 
+} else if (window.location.href == `http://localhost/myportfolio/public/admin/info`) {
+    button.addEventListener('click', function () {
+    const editProject = document.querySelector('.information');
+
+    navbar.classList.toggle('full-navbar');
+    editProject.classList.toggle('full-information');
+    footer.classList.toggle('full-footer');
+    }) 
 } else {
     button.addEventListener('click', function () {
     const myProjects = document.querySelector('.myprojects');

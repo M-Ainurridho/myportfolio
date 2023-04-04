@@ -37,4 +37,24 @@ class Message
         </div>';
         unset($_SESSION['image']);
     }
+
+    public static function contactInfoMessage($message, $action, $type, $info)
+    {
+        $_SESSION['contact'] = [
+            'message' => $message,
+            'action' => $action,
+            'type' => $type,
+            'info' => $info
+        ];
+    }
+
+    public static function contactInfoAlert()
+    {
+        echo '
+        <div class="alert alert-' . $_SESSION['contact']['type'] . ' alert-dismissible fade show" role="alert">
+            ' . $_SESSION['contact']['message'] . ' <strong>' . $_SESSION['contact']['action'] . '</strong>
+            , ' . $_SESSION['contact']['info'] . '.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>';
+        unset($_SESSION['contact']);
+    }
 }
